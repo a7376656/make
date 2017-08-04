@@ -50,10 +50,10 @@ class Login extends Controller
 	 */
 	public function register()
 	{
-		$username  = input('get.username');
-		$password  = md5(input('get.password'));
-		$password2 = md5(input('get.password2'));
-		$email     = input('get.email');
+		$username  = input('post.username');
+		$password  = md5(input('post.password'));
+		$password2 = md5(input('post.password2'));
+		$email     = input('post.email');
 
 		if(!$username || !$password || !$password2){
 			$this->error('请求错误','Index/index');
