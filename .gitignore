@@ -50,5 +50,5 @@ Temporary Items
 .idea/
 
 # Database config
-Database.php
-Config.php
+#Database.php
+#Config.php
