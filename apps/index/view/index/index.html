@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="__CSS__/common/normalize.css">
+  <link rel="stylesheet" href="__CSS__/common/custom.css">
+  <link rel="stylesheet" href="__CSS__/index.css">
+</head>
+<body>
+
+<div id="banner">
+  <div class="banner-content">
+    <nav>
+      <ul>
+        <li><a href="#product">商品宣传页</a></li>
+        <li><a href="#wechat">微信推广（H5）</a></li>
+        <li><a href="#pdf">宣传册（PDF）</a></li>
+        <li class="fr"><a href="#">登录/注册</a></li>
+      </ul>
+    </nav>
+    <div class="make">
+      <h1>MAK1231231231321312321E</h1>
+      <h2>商品宣传册智能化定制平台</h2>
+      <a href="__URL__/../Product/index.html" class="start-btn">开始制作</a>
+    </div>
+  </div>
+</div>
+
+<a name="product"></a>
+<div id="product" class="w">
+  <h2 class="subhead">商品宣传页</h2>
+  <p class="slogan">原创模板，精选风格。设计出独属你的商品宣传页面。</p>
+  <div class="product-options w">
+    <div class="circle template">
+      <div><h3 class="font18">挑选模板</h3><div class="line"></div><p class="font12">好的模板是成功的开始</p></div>
+      <div class="circle-mask"></div>
+    </div>
+    <div class="circle guide">
+      <div><h3 class="font18">新手指南</h3><div class="line"></div><p class="font12">新手？我们不怕</p></div>
+      <div class="circle-mask"></div>
+    </div>
+    <div class="circle new-webpage">
+      <div><h3 class="font18">新建网页</h3><div class="line"></div><p class="font12">迫不及待了吗？</p></div>
+      <div class="circle-mask"></div>
+    </div>
+  </div>
+</div>
+
+<a name="wechat"></a>
+<div id="wechat">
+  <div class="w">
+    <div class="fl" style="margin-top: 85px">
+      <h2 class="subhead">微信推广(H5)</h2>
+      <p class="slogan">手握素材，以梦为马。打造独属于你的H5小界面。</p>
+      <a href="__URL__/../Product/index.html" class="start-btn">开始制作</a>
+    </div>
+    <div id="phone">
+      <div class="hand"></div>
+    </div>
+  </div>
+</div>
+
+<a name="pdf"></a>
+<div id="pdf">
+  <div class="w">
+    <h2 class="subhead">宣传册(PDF)</h2>
+    <p class="slogan">天马行空，不忘初心。以纸为媒介，肆意挥洒你的创意。</p>
+    <div class="circle-row" style="width: 800px; margin-left: 100px; justify-content: space-around">
+      <div class="pdf-circle pdf-circle1"></div>
+      <div class="pdf-circle pdf-circle2"></div>
+    </div>
+    <div class="circle-row">
+      <div class="pdf-circle pdf-circle3"></div>
+      <div class="pdf-circle pdf-circle4"></div>
+      <div class="pdf-circle pdf-circle5"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Copyright©2017  杭电数媒学院. All rights reserved.</p>
+</footer>
+<script type="text/javascript" src="__JS__/libs/jquery-3.2.1.min.js"></script>
+<script>
+  $(function () {
+    $('#phone').on('mouseup', function () {
+      location.assign('./production-of-brochure.html');
+    });
+  });
+</script>
+</body>
+</html>

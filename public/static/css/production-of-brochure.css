@@ -1,0 +1,212 @@
+
+body {
+  background-color: #EAEDF2;
+}
+
+/* banner */
+.banner {
+  height: 620px;
+  background: url("../img/production-bg.png") 0 0 / cover  no-repeat;
+  position: relative;
+}
+
+.banner .title {
+  text-align: center;
+  margin-top: 160px;
+  color: #fff;
+}
+
+.title .choose {
+  margin-top: 160px;
+}
+
+.title .choose a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.banner .banner-content .choose img {
+  display: inline-block;
+  animation: up-and-down 2s infinite;
+}
+@keyframes up-and-down {
+  from {margin-top:0;}
+  to {margin-top:50px;}
+}
+
+/* tab切换 */
+ul.tab {
+  width: 580px;
+  margin: 20px auto;
+}
+
+ul.tab li {
+  display: inline-block;
+  width: 114px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+ul.tab li+li {
+  margin-left: 114px;
+}
+
+ul.tab li.active {
+  color: #54749D;
+  border-bottom: 2px solid #54749D;
+}
+
+ul.tab li a {
+  color: #000;
+}
+
+ul.tab li a:hover {
+  color: #54749D;
+}
+
+/* tab内容 */
+.tab-container {
+  width: 864px;
+  margin: 0 auto;
+}
+
+.tab-container .tab-content {
+  display: none;
+}
+
+.selected {
+  display: block !important;
+  animation: fade-in 1s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-content .box {
+  float: left;
+  width: 240px;
+  height: 220px;
+  margin: 20px 24px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 3px 3px 12px #ccc,
+              3px -3px 12px #ccc,
+              -3px -3px 12px #ccc,
+              -3px 3px 12px #ccc;
+  text-align: center;
+}
+
+.tab-content .box a.cover {
+  display: block;
+  width: 240px;
+  height: 160px;
+  border-radius: 20px 20px 0 0;
+  background: url("../img/baby.jpg") center center / cover no-repeat;
+}
+.tab-content .box:nth-last-of-type(4n+1) a.cover {
+  background: url("../img/baby.jpg") center center / cover no-repeat;
+}
+.tab-content .box:nth-last-of-type(4n+2) a.cover {
+  background: url("../img/love-letter.jpg") center center / cover no-repeat;
+}
+.tab-content .box:nth-last-of-type(4n+3) a.cover {
+  background: url("../img/small-town.jpg") center center / cover no-repeat;
+}
+.tab-content .box:nth-last-of-type(4n) a.cover {
+  background: url("../img/jewel.jpg") center center / cover no-repeat;
+}
+
+.tab-content .box .line {
+  width: 200px;
+  height: 1px;
+  background-color: #787878;
+  margin: 4px auto;
+}
+
+.tab-content .box .box-title {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+.tab-content .box .box-intro {
+  font-size: 14px;
+  color: #787878;
+}
+
+
+/* 选择主题 */
+#theme {
+  width: 864px;
+  margin: 20px auto;
+}
+
+#select-theme {
+  color: #54749D;
+  background-color: #F0F4F7;
+  border-style: solid;
+  border-color: #54749D;
+  border-width: 1px 0;
+  padding-left: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+#select-theme::after {
+  content: '风格主题';
+  display: block;
+  position: absolute;
+  left: 70px;
+  top: 50px;
+}
+
+#tags {
+  color: #54749D;
+}
+
+#tags span {
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 20px;
+  text-align: center;
+}
+
+#slide-toggle {
+  display: block;
+  width: 200px;
+  height: 36px;
+  margin: 0 auto;
+  position: relative;
+
+  line-height: 36px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+#slide-toggle::after {
+  content: '';
+  display: block;
+  height: 0;
+  width: 200px;
+  z-index: -1;
+  position: absolute;
+  left: -20px;
+  top: 0;
+
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+
+  border-top: 36px solid #54749D;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
