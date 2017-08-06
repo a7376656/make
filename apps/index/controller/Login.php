@@ -1,6 +1,7 @@
 <?php
 namespace app\index\controller;
 
+// use app\index\Controller\Base;
 use think\Controller;
 use think\request;
 use think\Url;
@@ -15,8 +16,8 @@ class Login extends Controller
 	 */
 	 public function login()
 	{
-		$username = input('post.username');
-		$password = md5(input('post.password'));
+		$username = input('get.username');
+		$password = md5(input('get.password'));
 
 		if(!$username || !$password){
 			$this->error('请求错误','Index/index');
@@ -67,7 +68,7 @@ class Login extends Controller
 			return;
 		}
 		if($check_email){
-			echo '{}';
+			echo '{"success":false,"msg":"邮箱已存在"}';
 		}
 		if($password != $password2){
 			echo '{"success":false,"msg":"两次输入的密码不一致"}';
@@ -79,6 +80,34 @@ class Login extends Controller
 		Session::set('username', $username);
 
 		echo '{"success":true,"msg":"注册成功"}';
+	}
 
+	/**
+	 * 导航显示登录状态
+	 * @return msg -- 头像地址
+	 */
+	public function nav_login()
+	{
+		// $this->check_login();
+		$result = $this->request->session('username');
+		if(empty($result)){
+			echo '{"success":false}';
+			return;
+		}else{
+			$avatar = Db::name('users')->where('username', $result)->value('avatar');
+			$avatar = json_encode($avatar);
+			echo '{"success":true,"msg":'.$avatar.'}';
+		}
+	}
+
+	/**
+	 * 用户退出登录
+	 */
+	public function Logout()
+	{
+		Session::set('username', null);
+		// $redirect=$_SERVER['HTTP_REFERER']; //退出登录前页面
+
+		// $this->redirect($redirect);
 	}
 }

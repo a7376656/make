@@ -6,19 +6,13 @@
   <link rel="stylesheet" href="__CSS__/common/normalize.css">
   <link rel="stylesheet" href="__CSS__/common/custom.css">
   <link rel="stylesheet" href="__CSS__/index.css">
+  {include file="public/scripts"}
 </head>
 <body>
 
 <div id="banner">
   <div class="banner-content">
-    <nav>
-      <ul>
-        <li><a href="#product">商品宣传页</a></li>
-        <li><a href="#wechat">微信推广（H5）</a></li>
-        <li><a href="#pdf">宣传册（PDF）</a></li>
-        <li class="fr"><a href="#">登录/注册</a></li>
-      </ul>
-    </nav>
+    {include file="public/nav"}
     <div class="make">
       <h1>MAK1231231231321312321E</h1>
       <h2>商品宣传册智能化定制平台</h2>
@@ -85,7 +79,7 @@
 <script>
   $(function () {
     $('#phone').on('mouseup', function () {
-      location.assign('./production-of-brochure.html');
+      location.assign('__URL__/../Product/index.html');
     });
   });
 </script>
