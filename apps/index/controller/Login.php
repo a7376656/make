@@ -16,8 +16,8 @@ class Login extends Controller
 	 */
 	 public function login()
 	{
-		$username = input('get.username');
-		$password = md5(input('get.password'));
+		$username = input('post.username');
+		$password = md5(input('post.password'));
 
 		if(!$username || !$password){
 			$this->error('请求错误','Index/index');
