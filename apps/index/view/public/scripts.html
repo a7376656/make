@@ -1,0 +1,30 @@
+<script type="text/javascript" src="__JS__/libs/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// nav显示登录状态,以及发表帖子处登录状态
+	$.ajax({
+		type: "get",
+		url: "__URL__/../Login/nav_login",
+		dataType: "json",
+		success: function(data){
+			if(data.success){
+				var imgattr = null; //头像地址
+				if(!data.msg)
+					imgattr = '__IMG__/default.jpg';
+				else
+					imgattr = '__IMG__/'+data.msg;
+
+				var atr = '<img src='+imgattr+'>';
+				$(".user-avatar").html(atr);
+				$(".login").show();
+			}else{
+				$(".offline").show();
+			}
+		},
+		error: function(jqXHR){
+			alert(jqXHR.status);
+		}
+	})
+});
+</script>
